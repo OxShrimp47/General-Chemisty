@@ -1,0 +1,577 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24075,        569]
+NotebookOptionsPosition[     22248,        503]
+NotebookOutlinePosition[     22589,        518]
+CellTagsIndexPosition[     22546,        515]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Name", ":", 
+   RowBox[{
+   "Tommy", " ", "Lee", " ", "Truong", "\[IndentingNewLine]", "Last", " ", 
+    "Edit"}], ":", " ", 
+   RowBox[{
+   "Nov", " ", "21", " ", "2016", "\[IndentingNewLine]", "Program", " ", 
+    RowBox[{"Name", ":", " ", 
+     RowBox[{"Assignment", " ", "2"}]}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.819860477937602*^9, 3.819860485496488*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Assignment 2", "Title",
+ CellChangeTimes->{{3.663605653014559*^9, 3.6636056720300694`*^9}, {
+  3.677003345863706*^9, 3.677003348639365*^9}, {3.678035422511342*^9, 
+  3.678035422844199*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The wavefunctions for a 1-dimensional particle-in-a-box (PIB) have the \
+functional form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalPsi]", "(", "x", ")"}], "=", 
+    RowBox[{
+     SqrtBox[
+      FractionBox["2", "L"]], 
+     RowBox[{"sin", "(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "L"], "x"}], ")"}]}]}], 
+   TraditionalForm]]],
+ ", where n is an integer greater than zero and L is the length of the box. \
+Write a function, called psiTrue, that returns the value of the first (i.e. \
+n=1) wavefunction, for a box with a length of 1, and plot the function from 0 \
+to 1."
+}], "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606269208987*^9, 3.663606270257213*^9}, 3.6770033378908787`*^9, {
+   3.677003368811132*^9, 3.6770034227467127`*^9}, {3.677003507853339*^9, 
+   3.677003519322253*^9}, {3.677432195020995*^9, 3.6774322134288816`*^9}, 
+   3.678035442495965*^9, {3.678035513541787*^9, 3.678035543509284*^9}, {
+   3.678035592930752*^9, 3.678035753320704*^9}, {3.678035955705882*^9, 
+   3.678035961402273*^9}, {3.678036063248989*^9, 3.678036073303767*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6872782769228497`*^9, 3.6872782793557405`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[CapitalPsi]", "[", 
+   RowBox[{"x_", ",", "L_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    SqrtBox[
+     RowBox[{"(", 
+      RowBox[{"2", "/", "L"}], ")"}]], ")"}], "*", 
+   RowBox[{"(", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", "*", "\[Pi]", "*", "x"}], ")"}], "/", "L"}], "]"}], 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6872782953116655`*^9, 3.687278371176407*^9}, {
+  3.6872784239214735`*^9, 3.6872784391375885`*^9}, {3.6872784920580645`*^9, 
+  3.687278499095813*^9}, {3.6872789333107615`*^9, 3.687278966556246*^9}, {
+  3.6872790379559317`*^9, 3.6872790406549397`*^9}, {3.6872793090775986`*^9, 
+  3.6872793305216484`*^9}, {3.688750268144943*^9, 3.688750281379554*^9}, {
+  3.6887505272615423`*^9, 3.688750551245345*^9}, {3.688751019383626*^9, 
+  3.688751027739253*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6887509159818897`*^9, 3.6887510057844453`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalPsi]", "[", 
+  RowBox[{"x", ",", "1", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6872783817773747`*^9, 3.687278396947595*^9}, {
+  3.6872785099120703`*^9, 3.6872785372203846`*^9}, {3.6887502236071253`*^9, 
+  3.6887502327153625`*^9}, {3.6887510421520543`*^9, 3.688751047445929*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["2"], " ", 
+  RowBox[{"Sin", "[", 
+   RowBox[{"\[Pi]", " ", "x"}], "]"}]}]], "Output",
+ CellChangeTimes->{{3.6887510360515327`*^9, 3.688751049604003*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6887508538289595`*^9, 3.6887508565725555`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[CapitalPsi]", "[", 
+     RowBox[{"x", ",", "1", ",", "1"}], "]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688749642711666*^9, 3.6887497692193017`*^9}, {
+  3.688749862249671*^9, 3.688749898749071*^9}, {3.6887500303630996`*^9, 
+  3.6887500352445536`*^9}, {3.688750084728656*^9, 3.688750098307655*^9}, {
+  3.688750296261388*^9, 3.688750297787275*^9}, {3.6887506167107196`*^9, 
+  3.6887506419915066`*^9}, {3.688750706673375*^9, 3.688750740637394*^9}, {
+  3.6887508676714993`*^9, 3.6887508683255515`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+     1.], LineBox[CompressedData["
+1:eJwV2Hk4VesXB3CiKEVEopIhkjRJGsi3QoNU5qFbSKbkZ6xESjKEhCSpkMpN
+pqQoSqUuDa5ZZTrO3ucYkumUnC2Zfu/9az+fZ7/Ps5693/WutfZWcvI2d5kh
+ICAgJCgg8N/V2KW3ofy7lb7M6sowtvUZfWEDeR9KTht9UbW+GRbW2HAnJfWp
+nCFCm9Yv9LZwxb6a5idpcpZwzGwTsbQ4DRvn0VeJcs64Hp08pWcRiY61lwyu
+yJ1E2PA7XzGLZGTIHIyMkQtHivu92EPmDxAq+nRFtFwSLjjqvr578Bls7e4W
+/PiZieA+sSK9DR8gNh16eLdCAS6m7vQwX90AVbOh3n8uFwEbFdb/L+krAmq3
+IGWkFHs9G0UVbVmQLZJkCwq+QWL24q1mtTSecQ2q6/Te4aWxw6n9yZ1455G2
+2G6gApp2nqo2uj3gq22TyP/fBxQtGt/1ILUXM8Zy5y9WrUJP2qxHjgv7oTPt
++MziUTX6jGSithkPojpcu/a9Rh3anQ0Lv1jzsCyhfyx7qB4aQ335ss9/oH+U
+Yn9Z1wij9R6Lft/5icy+l1XicU0QHlQwHIoahvjSLF5X12eUZpxV+WX7C7HH
+i10zln+Fvecm0wKRETDbc7vcQ5ohG5Wr5FYwgrLM/tsB4c1I+bLdPb9wBBdF
+NS0io5vRLGjpPvx0BOL1eW/vX2tGU61z0pmSEag5PEpnZzVjKNY45dTbEVif
+K7S1rG/GORvddVpNIygufV4NpRYkZJ3LL+KP4KRWRdHCf1qg9FdCZLMOH67a
+ihlXP7ZA5aNcw8hmPmx1gi/PrW1BnWRw4nxdPnS3ajvNaG2B7OK1gQbgY8bO
+TImhoRb4OcxvTN7NR7xZuEelfCvKZqsn/LLhI8fHUPGkXytc2qp0wgP4oB5V
+XG5QasPzZmGrP4V81A8KD2itaEO3uINm3lM+yjWNTJI027AgUOvC4WI+MnIq
+59psasPpo9WpJSV8OD14f4Vl0galqsgH9m/4ZJ8+xn8LaMMaiR3co9V8DMZW
+X5usacPryafrDbv5YP87d8S+qQ0lCz87VPbwUTtnv2V5SxvyBlmzjHr5eBRV
+Ix3W2Yao7m1v0M+HT3jtddGxNvi4WH9V/snHyNn6GwuWt2NW7KxLdyb4GPf4
+fHtlUDvcFq3Y4SfFwFLnyNU1Ie14tKSjNXcBgzzBnsgN4e0wTQta3CXNwD5l
+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
+
+      "]]}}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 1}, {0., 1.4142135210332178`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.688750869726973*^9, 3.6887510541482773`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.688750862928647*^9, 3.6887508634891276`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "An important attribute for wavefunctions is that the are normalized (or at \
+least normalizable). The interpretation of a normalized wavefunction is that \
+the probibility of finding the particle somewhere is equal to 1. The \
+mathematical meaning behind this is that the integral over all space of the \
+wavefunction squared is equal to 1. For us, this means that the integral of \
+",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["psiTrue", "2"], TraditionalForm]]],
+ " from zero to one is equal to one. Show that psiTrue is normalized."
+}], "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606229280918*^9, 3.663606299127985*^9}, 3.6770033413114567`*^9, {
+   3.6770035276204853`*^9, 3.6770035600434723`*^9}, 3.678035445972824*^9, {
+   3.6780357890348787`*^9, 3.678035872549902*^9}, {3.678035903472725*^9, 
+   3.678036033633173*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.66360630326585*^9, 3.6636063115384083`*^9}, {
+   3.677003564851179*^9, 3.6770035951962223`*^9}, 3.678036048691299*^9, {
+   3.678045079361927*^9, 3.678045081217815*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "0", "1"], 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]", "[", 
+       RowBox[{"x", ",", "1", ",", "1"}], "]"}], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], ")"}], "^", "2"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6887512097252607`*^9, 3.688751273453733*^9}, {
+   3.68875130970251*^9, 3.6887513525841465`*^9}, {3.6887514278603783`*^9, 
+   3.688751477491638*^9}, 3.6887516614009595`*^9, {3.688751907601466*^9, 
+   3.6887520281099696`*^9}, {3.688752083580353*^9, 3.6887520944848704`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.68875202865311*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.6887520687365026`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{"F", "[", "x", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.688751541811364*^9, 3.6887516370034547`*^9}, {
+   3.6887517017908134`*^9, 3.6887517112227983`*^9}, 3.6887518124904823`*^9, {
+   3.6887519308824396`*^9, 3.688751931142232*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", 
+    RowBox[{"ConditionalExpression", "[", 
+     RowBox[{
+      RowBox[{"0.3183098861837907`", " ", 
+       RowBox[{"(", 
+        RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+         RowBox[{"6.283185307179586`", " ", 
+          RowBox[{"C", "[", "1", "]"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"C", "[", "1", "]"}], "\[Element]", "Integers"}]}], "]"}]}], 
+   "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.688751666223891*^9, 3.688751712283245*^9, 3.6887518144718485`*^9, {
+   3.6887519220893755`*^9, 3.6887519816803813`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.688751648716814*^9, 3.6887516487298036`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Once we know the wavefunction for a quantum mechanical object, it turns out \
+we know everything we can possibly know about that object. For example, we \
+can calculate it\[CloseCurlyQuote]s average position, as well as it\
+\[CloseCurlyQuote]s average energy. To calculate properties (called \
+\[OpenCurlyDoubleQuote]observables\[CloseCurlyDoubleQuote] in quantum \
+mechanics) from a wavefunction, we first need mathematical functions that are \
+called operators. For example, the position operator is \
+\[OpenCurlyDoubleQuote]multiply by x\[CloseCurlyDoubleQuote], while the \
+energy operator in this model is \[OpenCurlyDoubleQuote]take the second \
+derivative, and multiply by -",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["h", 
+    RowBox[{"8", "\[Pi]", " ", "m"}]], TraditionalForm]]],
+ ", where h is Planck\[CloseCurlyQuote]s constant and m is the object\
+\[CloseCurlyQuote]s mass\[CloseCurlyDoubleQuote]. Once we have found the \
+operator of interest, we calculate the property by integrating over all space \
+(from 0 to 1 for this problem) the wavefunction times the operator times the \
+wavefunction. Calculate the average position and average energy for the \
+wavefunction psiTrue. Do these quantities make sense, or at least match the \
+book?"
+}], "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606229280918*^9, 3.663606299127985*^9}, {3.663606454635068*^9, 
+   3.663606645035955*^9}, {3.663606724787838*^9, 3.6636067262246523`*^9}, 
+   3.6770036225480623`*^9, {3.677003764491551*^9, 3.6770037797843*^9}, 
+   3.677003810260618*^9, {3.677003875049676*^9, 3.6770038901439457`*^9}, 
+   3.678035449756557*^9, {3.6780361371811447`*^9, 3.6780361863050003`*^9}, {
+   3.6780363296681128`*^9, 3.678036334898334*^9}, {3.678036375591929*^9, 
+   3.678036448097986*^9}, {3.6780364866351347`*^9, 3.6780367486947927`*^9}, {
+   3.678047185912642*^9, 3.6780472008467417`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.6770037245051327`*^9, {3.677003815556427*^9, 3.6770038375641727`*^9}, {
+   3.6770038971528053`*^9, 3.6770039143918943`*^9}, {3.678036252299055*^9, 
+   3.678036262513034*^9}, 3.678036727175043*^9, 3.678045087473688*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "An important theory in quantum mechanics is the variational theory. The \
+variational theory tells us that if we don\[CloseCurlyQuote]t know the \
+correct wavefunction for a quantum mechanical object, we can use another \
+wavefunction, and the energy we calculate will always be larger than the true \
+energy, and the closer the calculated energy is to the true energy, the \
+better the test wavefunction approximates the true wavefunction. Create a \
+function, called testPsi, with the formula ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SqrtBox["630"], " ", 
+    SuperscriptBox["x", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}], "2"]}], TraditionalForm]]],
+ ", and show that this wavefunction is normalized."
+}], "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606269208987*^9, 3.663606270257213*^9}, {3.6636069801855583`*^9, 
+   3.6636070829435663`*^9}, {3.663607115346734*^9, 3.6636071233456306`*^9}, 
+   3.677003626491859*^9, {3.677432251593934*^9, 3.677432347472719*^9}, 
+   3.6780354538682337`*^9, {3.6780367688326397`*^9, 3.678036997595715*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.663613614448601*^9, 3.6636136211668587`*^9}, 
+   3.677003719377472*^9, {3.67700402073563*^9, 3.677004031709105*^9}, {
+   3.67743227661861*^9, 3.677432280179318*^9}, {3.677432314088497*^9, 
+   3.67743236594593*^9}, {3.6780370065737333`*^9, 3.678037015373047*^9}, 
+   3.678045097601347*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Create a plot comparing the true wavefunction with the test wavefunction.\
+\>", "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606269208987*^9, 3.663606270257213*^9}, {3.6636069801855583`*^9, 
+   3.6636070829435663`*^9}, {3.663607115346734*^9, 3.6636071841637917`*^9}, 
+   3.677003630267892*^9, {3.677432485173334*^9, 3.67743260891661*^9}, {
+   3.677432644037232*^9, 3.6774327119016047`*^9}, {3.677432749837871*^9, 
+   3.677432789159707*^9}, {3.677432840027102*^9, 3.677432857338913*^9}, 
+   3.678035460588434*^9, {3.6780370346818867`*^9, 3.6780370641438913`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.677003714705414*^9, {3.677432800986373*^9, 3.6774328050717297`*^9}, 
+   3.678037073154254*^9, 3.6780451043540792`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the average position and average energy of a particle with the test \
+wavefunction.\
+\>", "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606269208987*^9, 3.663606270257213*^9}, {3.6636069801855583`*^9, 
+   3.6636070829435663`*^9}, {3.663607115346734*^9, 3.6636071841637917`*^9}, {
+   3.663607217188292*^9, 3.6636073253001223`*^9}, 3.677003637995442*^9, {
+   3.677433145352433*^9, 3.677433360567295*^9}, {3.677433450066409*^9, 
+   3.677433517388068*^9}, {3.6774335524756002`*^9, 3.677433828581995*^9}, {
+   3.67743387781085*^9, 3.6774340928935337`*^9}, 3.6780354679725723`*^9, {
+   3.678037088782214*^9, 3.678037120867733*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.677003706201828*^9, {3.677434470759183*^9, 3.677434662168806*^9}, {
+   3.677434786717215*^9, 3.677434830685376*^9}, {3.678037132886504*^9, 
+   3.678037143750535*^9}, 3.67804510949026*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the ratio of the average energy from the test wavefunction to the \
+average energy of the true wavefunction. Does this ratio follow what we \
+expect based on the variational theory?\
+\>", "Subchapter",
+ CellChangeTimes->{{3.663605705614245*^9, 3.663605760803849*^9}, 
+   3.663605804362789*^9, {3.6636058971710167`*^9, 3.663605915801206*^9}, {
+   3.663605998107522*^9, 3.6636060073144703`*^9}, 3.663606072257621*^9, {
+   3.663606229280918*^9, 3.663606299127985*^9}, {3.663611630194903*^9, 
+   3.663611717655253*^9}, {3.663612892980136*^9, 3.663612922642173*^9}, 
+   3.677003641971222*^9, {3.677434095635511*^9, 3.677434145372333*^9}, {
+   3.67743421657202*^9, 3.677434399911613*^9}, {3.677434869524219*^9, 
+   3.677434930208809*^9}, 3.678035474003887*^9, {3.678037163963992*^9, 
+   3.678037226914163*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6636117359676113`*^9, 3.6636118036988993`*^9}, 
+   3.677003700337785*^9, {3.677434671944089*^9, 3.677434772365443*^9}, {
+   3.677434845877157*^9, 3.677434856115559*^9}, {3.678037236692734*^9, 
+   3.678037272538363*^9}, 3.678045115305097*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{765, 772},
+WindowMargins->{{Automatic, -6}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 412, 10, 69, "Input"],
+Cell[CellGroupData[{
+Cell[995, 34, 195, 3, 101, "Title"],
+Cell[CellGroupData[{
+Cell[1215, 41, 1320, 28, 342, "Subchapter"],
+Cell[2538, 71, 96, 1, 30, "Input"],
+Cell[2637, 74, 869, 21, 43, "Input"],
+Cell[3509, 97, 96, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[3630, 102, 321, 5, 30, "Input"],
+Cell[3954, 109, 188, 5, 34, "Output"]
+}, Open  ]],
+Cell[4157, 117, 96, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[4278, 122, 658, 13, 30, "Input"],
+Cell[4939, 137, 6737, 124, 236, "Output"]
+}, Open  ]],
+Cell[11691, 264, 94, 1, 30, InheritFromParent]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11822, 270, 1039, 18, 387, "Subchapter"],
+Cell[12864, 290, 217, 3, 30, "Input"],
+Cell[CellGroupData[{
+Cell[13106, 297, 599, 14, 48, "Input"],
+Cell[13708, 313, 86, 2, 30, "Output"]
+}, Open  ]],
+Cell[13809, 318, 70, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[13904, 323, 285, 5, 30, "Input"],
+Cell[14192, 330, 611, 16, 30, "Output"]
+}, Open  ]],
+Cell[14818, 349, 94, 1, 30, InheritFromParent]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14949, 355, 2077, 33, 713, "Subchapter"],
+Cell[17029, 390, 269, 4, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17335, 399, 1304, 24, 227, "Subchapter"],
+Cell[18642, 425, 337, 5, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19016, 435, 764, 11, 107, "Subchapter"],
+Cell[19783, 448, 169, 3, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19989, 456, 836, 13, 107, "Subchapter"],
+Cell[20828, 471, 238, 4, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21103, 480, 824, 13, 187, "Subchapter"],
+Cell[21930, 495, 290, 4, 30, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
